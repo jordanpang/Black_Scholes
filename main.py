@@ -1,7 +1,6 @@
 import numpy as np
 from scipy.stats import norm
 from py_vollib.black_scholes import black_scholes as bs
-from py_vollib.black_scholes.greeks.analytical import delta, gamma, vega, theta, rho
 
 # Define variables 
 r = 0.01 #Interest rate
