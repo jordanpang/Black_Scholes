@@ -4,11 +4,11 @@ from py_vollib.black_scholes import black_scholes as bs
 from py_vollib.black_scholes.greeks.analytical import delta, gamma, vega, theta, rho
 
 # Define variables 
-r = 0.01
-S = 30
-K = 40
-T = 240/365
-sigma = 0.30
+r = 0.01 #Interest rate
+S = 30 # Underlying price
+K = 40 #Strike price
+T = 240/365 #Time to expiration in years
+sigma = 0.30 #Volatility
 
 def blackScholes(r, S, K, T, sigma, type="c"):
     "Calculate BS price of call/put"
