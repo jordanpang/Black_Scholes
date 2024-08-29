@@ -156,7 +156,7 @@ def main():
     st.markdown(
         """
     **Contact Information**:
-    - **Email**: jordanpang03@outlook.com
+    - **Email**: jp1222@ic.ac.uk
     - **GitHub**: [jordanpang](https://github.com/jordanpang/)
     """
     )
