@@ -5,7 +5,6 @@ from scipy.stats import norm
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
 import seaborn as sns
-import mysql.connector  # Wanted to use this to connect with a database storing data the user creates...
 
 # Set the page configuration
 st.set_page_config(
