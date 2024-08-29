@@ -5,7 +5,7 @@ from scipy.stats import norm
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
 import seaborn as sns
-import mysql.connector
+import mysql.connector  # Wanted to use this to connect with a database storing data the user creates...
 
 # Set the page configuration
 st.set_page_config(
@@ -174,9 +174,13 @@ def main():
             intended to allow users to input factors, to calculate theoretical values
             of options dynamically, providing visual aids by means of heatmaps,
             to illustrate the impact of sensitive inputs to option prices. As a result,
-            P&L for taking option positions are calculated and stored in a MySQL relational
-            database, enabling fast and structured retrieval of data.
-            
+            P&L for taking option positions are calculated and a heatmap is produced to distinctly
+            portraying how sensitive the position is to changes in volatility and underlying price.
+            The next goal is to store input values for the Black-Scholes options pricing model,
+            and then to create an output table recording the volatility and underlying shocks, and the
+            P&L associated with the postion, where each record is uniquely identified and connected by a
+            Calculation ID.
+
             The motivation for the project stems from Natenburg's 'Option Volatility and Pricing',
             which gave me insights into various methods to price an option, one of which is
             the Black-Scholes Model for European options. I began by creating a python REPL
@@ -437,7 +441,7 @@ def main():
             st.pyplot(fig)
         
         plot_pnl_heatmap_with_bins(spot_min, spot_max, vol_min, vol_max, r_pnl, X_pnl, t_pnl, premium, bins=10)
-
+    
 
 
 if __name__ == "__main__":
